@@ -1,0 +1,33 @@
+{
+  "name": "F-Hue-CK",
+  "title": "F Hue CK by Blitz",
+  "description": "Foundry Hue Creation Kit. Integrate Foundry with your Hue lights.",
+  "version": "0.0.1",
+  "author": "Blitzkraig",
+  "scripts": [
+    "./fhueck.js"
+  ],
+  "styles": [
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "socket": false,
+  "minimumCoreVersion": "0.8.9",
+  "compatibleCoreVersion": "0.8.9",
+  "url": "https://github.com/BlitzKraig/fvtt-F-Hue-CK",
+  "manifest": "https://raw.githubusercontent.com/BlitzKraig/fvtt-F-Hue-CK/master/module.json",
+  "download": "https://github.com/BlitzKraig/fvtt-F-Hue-CK/releases/download/latest/soundboard-release.zip",
+  "manifestPlusVersion": "1.0.0",
+  "media": [{
+    "type": "cover",
+    "url": "https://raw.githubusercontent.com/BlitzKraig/fvtt-F-Hue-CK/master/docs/cover.png"
+  }],
+  "allowBugReporter": true,
+  "bugs": "https://github.com/BlitzKraig/fvtt-F-Hue-CK/issues"
+}
