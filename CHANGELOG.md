@@ -1,5 +1,5 @@
-# Foundry Hue Creation Kit Changelog
+# Changelog
 
-## 0.0.1 - 2021/11/08
+## 0.0.2 - 2021/11/10
 
-* Initial Release
+* Simple PoC
