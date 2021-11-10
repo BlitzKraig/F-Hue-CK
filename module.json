@@ -26,10 +26,6 @@
   "manifest": "https://raw.githubusercontent.com/BlitzKraig/fvtt-HueJASS/master/module.json",
   "download": "https://github.com/BlitzKraig/fvtt-HueJASS/releases/download/latest/huejass-release.zip",
   "manifestPlusVersion": "1.0.0",
-  "media": [{
-    "type": "cover",
-    "url": "https://raw.githubusercontent.com/BlitzKraig/fvtt-HueJASS/master/docs/cover.png"
-  }],
   "allowBugReporter": true,
   "bugs": "https://github.com/BlitzKraig/fvtt-HueJASS/issues"
 }
