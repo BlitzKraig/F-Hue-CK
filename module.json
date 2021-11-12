@@ -2,7 +2,7 @@
   "name": "hue-jass",
   "title": "HueJASS by Blitz",
   "description": "Hue Javascript API with Simplified Scripting. Integrate Foundry with your Hue lights.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Blitzkraig",
   "scripts": [
     "./huejass.js",

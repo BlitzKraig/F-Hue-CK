@@ -16,8 +16,9 @@ This could be solved with a simple Node server, but that becomes a hassle to run
 ## How to use
 
 * Activate the module
-* Press the big button on your Hue bridge
+* Enable Hue Control in module settings
 * Set the default light ID in module settings (default is 3, which is the ID of the light I'm testing on)
+* Press the big button on your Hue bridge
 * Press the horse button in the light sidebar to test
 
 You can get your light ID's using `await HueJASS.manager.user.getLights()`

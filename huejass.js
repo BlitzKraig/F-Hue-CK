@@ -9,7 +9,9 @@ class HueJASS {
 
     static async onInit() {
         HueJASS.registerSettings();
-        HueJASS.manager = new HueJASSManager();
+        if(game.settings.get('HueJASS', 'hueControl')){
+            HueJASS.manager = new HueJASSManager();
+        }
     }
 
     static registerSettings() {
@@ -43,6 +45,16 @@ class HueJASS {
                 HueJASS.manager.defaults.id = value
             }
         })
+        game.settings.register('HueJASS', 'hueControl', {
+            name: "Enable Hue control for this user",
+            scope: 'client',
+            config: true,
+            default: false,
+            type: Boolean,
+            onChange: value => {
+                window.location.reload();
+            }
+        })
     }
 
     static addSceneControls(controls) {
@@ -51,7 +63,7 @@ class HueJASS {
             name: 'hue-manager',
             title: 'HueJASS',
             icon: 'fas fa-horse',
-            visible: game.user.isGM,
+            visible: true,
             onClick: ()=>{HueJASS.manager.helpers.toggle()},
             button: true
         });
