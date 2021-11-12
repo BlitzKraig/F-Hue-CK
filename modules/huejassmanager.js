@@ -7,7 +7,7 @@ class HueJASSManager {
 
         this.defaults = {
             type: HueJASS.Types.LIGHT,
-            id: game.settings.get('HueJASS', 'defaultLightID'),
+            id: game.settings.get('hue-jass', 'defaultLightID'),
             brightness: 200
         }
         this.lightStates = {}
@@ -17,12 +17,12 @@ class HueJASSManager {
     }
 
     async authenticate() {
-        let user = game.settings.get('HueJASS', 'user');
+        let user = game.settings.get('hue-jass', 'user');
         if (user) {
             this.user = this.bridge.user(user);
             this.originalConfig = await this.helpers.getState();
         } else {
-            this.bridge.createUser('HueJASS').then(async (response) => {
+            this.bridge.createUser('hue-jass').then(async (response) => {
                 if (response[0].error) {
                     let error = response[0].error;
                     if (error.type === 101) {
@@ -33,7 +33,7 @@ class HueJASSManager {
                     }
                 } else if (response[0].success) {
                     var username = response[0].success.username;
-                    game.settings.set('HueJASS', 'user', username);
+                    game.settings.set('hue-jass', 'user', username);
                     this.originalConfig = await this.helpers.getState();
                 }
             })
@@ -41,7 +41,7 @@ class HueJASSManager {
     }
     
     discover() {
-        let ip = game.settings.get('HueJASS', 'bridgeIP')
+        let ip = game.settings.get('hue-jass', 'bridgeIP')
         if (ip) {
             this.bridge = this.hue.bridge(ip)
             this.authenticate();
@@ -50,7 +50,7 @@ class HueJASSManager {
                 if (bridges.length === 0) {
                     console.log('No bridges found. :(');
                 } else {
-                    game.settings.set('HueJASS', 'bridgeIP', bridges[0].internalipaddress)
+                    game.settings.set('hue-jass', 'bridgeIP', bridges[0].internalipaddress)
                     this.authenticate();
                 }
             }).catch(e => console.log('Error finding bridges', e));
