@@ -27,3 +27,12 @@ You can do all sorts of fun stuff in macros.
 Use `HueJASS.manager.user.setLightState(lightID, {data})` or `HueJASS.manager.user.setGroupState(groupID, {data})`, where `data` contains props from <https://developers.meethue.com/develop/hue-api/lights-api/>
 
 Using this approach, you can use any light ID, so go nuts. You can do all sorts by playing with `HueJASS.manager.user...`
+
+## Simple Use-Case Example
+* Set up a 'Normal' scene, and a 'Combat' scene via the Hue app.
+* Use `await HueJASS.manager.user.getScenes()` to get a list of known scenes.
+* Note the scene identifiers for your scenes.
+* Use `await HueJASS.manager.user.getGroups()` to get a list of known groups.
+* Note the ID for the group that matches the scene
+* Create a macro for Combat Start, and another for Combat End (or link them to hooks)
+* Use `await HueJASS.manager.user.setGroupState(GROUP_ID, {scene:'SCENE_ID'})` in your macros to switch the scene
