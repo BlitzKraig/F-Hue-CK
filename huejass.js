@@ -9,13 +9,13 @@ class HueJASS {
 
     static async onInit() {
         HueJASS.registerSettings();
-        if(game.settings.get('HueJASS', 'hueControl')){
+        if(game.settings.get('hue-jass', 'hueControl')){
             HueJASS.manager = new HueJASSManager();
         }
     }
 
     static registerSettings() {
-        game.settings.register('HueJASS', 'bridgeIP', {
+        game.settings.register('hue-jass', 'bridgeIP', {
             name: "Bridge IP",
             scope: 'client',
             config: true,
@@ -25,7 +25,7 @@ class HueJASS {
                 HueJASS.manager.bridge = HueJASS.manager.hue.bridge(value)
             }
         });
-        game.settings.register('HueJASS', 'user', {
+        game.settings.register('hue-jass', 'user', {
             name: "Bridge User",
             scope: 'client',
             config: true,
@@ -35,7 +35,7 @@ class HueJASS {
                 HueJASS.manager.user = HueJASS.manager.bridge.user(value);
             }
         });
-        game.settings.register('HueJASS', 'defaultLightID', {
+        game.settings.register('hue-jass', 'defaultLightID', {
             name: "Default Light or Group ID",
             scope: 'client',
             config: true,
@@ -45,7 +45,7 @@ class HueJASS {
                 HueJASS.manager.defaults.id = value
             }
         })
-        game.settings.register('HueJASS', 'hueControl', {
+        game.settings.register('hue-jass', 'hueControl', {
             name: "Enable Hue control for this user",
             scope: 'client',
             config: true,
