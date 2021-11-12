@@ -28,6 +28,10 @@ Use `HueJASS.manager.user.setLightState(lightID, {data})` or `HueJASS.manager.us
 
 Using this approach, you can use any light ID, so go nuts. You can do all sorts by playing with `HueJASS.manager.user...`
 
+## Troubleshooting
+
+There are currently some SSL issues to address. If you are unable to use the module, try visiting `https://your-bridge-ip` in the browser, clicking advanced, and allowing the connection. Refresh foundry once you've done this, and you should now be able to connect to the bridge.
+
 ## Simple Use-Case Example
 * Set up a 'Normal' scene, and a 'Combat' scene via the Hue app.
 * Use `await HueJASS.manager.user.getScenes()` to get a list of known scenes.
