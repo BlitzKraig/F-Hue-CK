@@ -1,5 +1,7 @@
 # Foundry Hue Javascript API with Simplified Scripting
 
+# Don't use this, it's broken af right now... Looking at a fix
+
 ![HueJASS Release](https://github.com/BlitzKraig/fvtt-HueJASS/workflows/HueJASS%20Release/badge.svg)
 ![Latest Release Download Count](https://img.shields.io/github/downloads/BlitzKraig/fvtt-HueJASS/latest/huejass-release.zip)
 
